@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{de3b162e-fc43-496a-8960-e0a5bd118ef3}</ProjectGuid>
+    <RootNamespace>nullptr</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>PGOptimize</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>includes\directx;$(IncludePath)</IncludePath>
+    <LibraryPath>libraries\directx\x86;libraries\directx\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>includes\directx;$(IncludePath)</IncludePath>
+    <LibraryPath>libraries\directx\x86;libraries\directx\x64;$(LibraryPath)</LibraryPath>
+    <IntDir>build\bin\</IntDir>
+    <OutDir>$(SolutionDir)build\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>
+      </MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EmbedManagedResourceFile>%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>libraries\directx\x64\d3d9.lib;libraries\directx\x64\d3dx9.lib;libraries\directx\x86\d3d9.lib;libraries\directx\x86\d3dx9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\globals.cpp" />
+    <ClCompile Include="src\hacks\apex\apex.cpp" />
+    <ClCompile Include="src\hacks\apex\features\aim.cpp" />
+    <ClCompile Include="src\hacks\apex\features\esp.cpp" />
+    <ClCompile Include="src\hacks\apex\features\misc.cpp" />
+    <ClCompile Include="src\hacks\apex\sdk\vectors.cpp" />
+    <ClCompile Include="src\hacks\apex\sdk\sdk.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mhyprot\baseadress.cpp" />
+    <ClCompile Include="src\mhyprot\file_utils.cpp" />
+    <ClCompile Include="src\mhyprot\mhyprot.cpp" />
+    <ClCompile Include="src\mhyprot\service_utils.cpp" />
+    <ClCompile Include="src\mhyprot\utils.cpp" />
+    <ClCompile Include="src\mhyprot\win_utils.cpp" />
+    <ClCompile Include="src\security\security.cpp" />
+    <ClCompile Include="src\utillity\menu\menu.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui_key.cpp" />
+    <ClCompile Include="src\utillity\overlay\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\utillity\overlay\overlay.cpp" />
+    <ClCompile Include="src\utillity\utillity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\globals.h" />
+    <ClInclude Include="src\hacks\apex\apex.h" />
+    <ClInclude Include="src\hacks\apex\draw.h" />
+    <ClInclude Include="src\hacks\apex\features\aim.h" />
+    <ClInclude Include="src\hacks\apex\features\caching.h" />
+    <ClInclude Include="src\hacks\apex\features\esp.h" />
+    <ClInclude Include="src\hacks\apex\features\misc.h" />
+    <ClInclude Include="src\hacks\apex\offsets.h" />
+    <ClInclude Include="src\hacks\apex\sdk\item.h" />
+    <ClInclude Include="src\hacks\apex\sdk\vectors.h" />
+    <ClInclude Include="src\hacks\apex\sdk\sdk.h" />
+    <ClInclude Include="src\includes.h" />
+    <ClInclude Include="src\mhyprot\baseadress.h" />
+    <ClInclude Include="src\mhyprot\file_utils.hpp" />
+    <ClInclude Include="src\mhyprot\log.h" />
+    <ClInclude Include="src\mhyprot\logger.hpp" />
+    <ClInclude Include="src\mhyprot\mhyprot.hpp" />
+    <ClInclude Include="src\mhyprot\nt.hpp" />
+    <ClInclude Include="src\mhyprot\raw_driver.hpp" />
+    <ClInclude Include="src\mhyprot\readbase.hpp" />
+    <ClInclude Include="src\mhyprot\service_utils.hpp" />
+    <ClInclude Include="src\mhyprot\utils.h" />
+    <ClInclude Include="src\mhyprot\win_utils.hpp" />
+    <ClInclude Include="src\security\security.h" />
+    <ClInclude Include="src\utillity\cfg\vars.h" />
+    <ClInclude Include="src\utillity\menu\menu.h" />
+    <ClInclude Include="src\utillity\obfuscation\singleton.h" />
+    <ClInclude Include="src\utillity\obfuscation\xor.h" />
+    <ClInclude Include="src\utillity\overlay\imgui\imgui.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imgui_impl_dx9.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imgui_impl_win32.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imgui_internal.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imgui_key.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imstb_rectpack.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imstb_textedit.hpp" />
+    <ClInclude Include="src\utillity\overlay\imgui\imstb_truetype.hpp" />
+    <ClInclude Include="src\utillity\overlay\overlay.h" />
+    <ClInclude Include="src\utillity\render\renderer.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\backend\imgui_impl_dx9.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\backend\imgui_impl_win32.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\imgui.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\imgui_internal.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\utillity\render\wrapper\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\utillity\render\wrapper\overlay.h" />
+    <ClInclude Include="src\utillity\utillity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="includes\null.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
